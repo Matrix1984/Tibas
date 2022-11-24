@@ -22,7 +22,7 @@ public class IdentityService : IIdentityService
 
         if (user == null || !await _userManager.CheckPasswordAsync(user, password))
             throw new AuthorizationException("Username or password are incorrect.");
-
+         
         return new UserDto()
         {
             Id = user.Id,

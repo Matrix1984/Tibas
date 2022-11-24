@@ -29,7 +29,7 @@ public class GETJWTQueryHandler : IRequestHandler<GETJWTQuery, TokenResponseVM>
 
         try
         {
-            userVM = await _identityService.LoginAsync(request.LoginName, request.Password);
+            userVM = await _identityService.LoginAsync(request.LoginName, request.Password); 
         }
         catch (AuthorizationException ex)
         {
